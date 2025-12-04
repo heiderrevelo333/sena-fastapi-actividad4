@@ -1,5 +1,7 @@
 # 📦 Proyecto: sena-fastapi-actividad4
 
+**Repositorio GitHub:** [https://github.com/heiderrevelo333/sena-fastapi-actividad4.git](https://github.com/heiderrevelo333/sena-fastapi-actividad4.git)
+
 ## 🚀 Descripción general
 
 Este proyecto corresponde a la **Actividad 4 del curso de Python con FastAPI**.  
@@ -26,20 +28,22 @@ Puedes instalar las dependencias ejecutando:
 
 ```bash
 pip install fastapi uvicorn
+```
 
-▶️ Ejecución del proyecto
+## ▶️ Ejecución del proyecto
 
 Desde la terminal, en la carpeta raíz del proyecto, ejecuta:
 
+```bash
 uvicorn main:app --reload
-
+```
 
 Luego abre en tu navegador:
 👉 http://localhost:8000/docs
 
 Ahí podrás probar cada endpoint usando la interfaz interactiva Swagger UI.
 
-🧩 Endpoints implementados
+## 🧩 Endpoints implementados
 Método	Ruta	Descripción	Ejemplo de entrada	Ejemplo de salida
 GET	/	Mensaje de bienvenida	–	{ "mensaje": "Bienvenido..." }
 POST	/productos/	Crea un producto y devuelve sus datos	{ "nombre": "Teclado", "precio": 99.9, "en_stock": true, "tags": ["periférico"] }	Eco de los datos enviados
@@ -50,7 +54,8 @@ POST	/perfil/	Demuestra campos opcionales	{ "usuario": "leo", "bio": "hola" }	In
 POST	/calificacion/	Conversión automática de tipo float	{ "curso": "Python", "nota": "4.5" }	{ "curso": "Python", "nota": 4.5, "mensaje": "Calificación registrada para Python" }
 POST	/configuracion/	Usa valores por defecto si no se envían datos	{}	{ "modo": "produccion", "version": 1.0 }
 POST	/validacion/estricta	Valida tipos estrictamente	{ "cantidad": "abc" }	Error 422 Unprocessable Entity
-🧠 Validaciones esperadas (para pruebas automáticas)
+
+## 🧠 Validaciones esperadas (para pruebas automáticas)
 
 Ruta raíz / debe devolver exactamente { "mensaje": "Bienvenido..." }.
 
@@ -62,15 +67,17 @@ En /configuracion/, los valores por defecto deben aplicarse correctamente.
 
 En /validacion/estricta, si se envía un valor no numérico, debe retornar HTTP 422.
 
-```bash
-📄 Estructura del proyecto
+## 📄 Estructura del proyecto
+
+```
 sena-fastapi-actividad4/
 │
 ├── main.py          # Código principal de la aplicación FastAPI
 ├── README.md        # Descripción y documentación del proyecto
-└── requirements.txt # (Opcional) Dependencias del proyecto
+└── requirements.txt # Dependencias del proyecto
 ```
-👨‍💻 Autor
+
+## 👨‍💻 Autor
 
 Nombre: Esteban Revelo
 Yojhann Vasquez
